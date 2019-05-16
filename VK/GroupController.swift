@@ -9,6 +9,8 @@
 import UIKit
 
 class GroupController: UITableViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +31,20 @@ class GroupController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 10
     }
+    
+    
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard  let cell = tableView.dequeueReusableCell(withIdentifier: GroupCell.reuseId, for: indexPath) as? GroupCell else {fatalError("Cell connot be dequeued")}
 
         // Configure the cell...
-
+cell.GroupLabel.text = "College"
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
