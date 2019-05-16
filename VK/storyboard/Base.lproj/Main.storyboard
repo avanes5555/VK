@@ -156,7 +156,7 @@
         <scene sceneID="fbF-Vd-sfD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iRV-E8-Zhh" userLabel="Group" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="97s-ud-GUl" userLabel="Group"/>
+                    <tabBarItem key="tabBarItem" title="Groups" id="97s-ud-GUl" userLabel="Group"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vjo-mV-a1q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -182,16 +182,34 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" id="JoD-3f-PyU">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.55327696339999999" green="0.69112541989999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nPu-Zp-bQw">
-                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="178" id="nPu-Zp-bQw" userLabel="GroupCell" customClass="GroupCell" customModule="VK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="178"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nPu-Zp-bQw" id="udl-jG-BXg">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="177.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWa-Ov-j4D">
+                                            <rect key="frame" x="36" y="76" width="342" height="25.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZWa-Ov-j4D" firstAttribute="centerY" secondItem="udl-jG-BXg" secondAttribute="centerY" id="3Jh-3j-Pf6"/>
+                                        <constraint firstItem="ZWa-Ov-j4D" firstAttribute="leading" secondItem="udl-jG-BXg" secondAttribute="leadingMargin" constant="16" id="7kM-GC-hLR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ZWa-Ov-j4D" secondAttribute="trailing" constant="16" id="AyJ-vP-0kp"/>
+                                        <constraint firstItem="ZWa-Ov-j4D" firstAttribute="centerY" secondItem="udl-jG-BXg" secondAttribute="centerY" id="gX9-Hl-90T"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="GroupLabel" destination="ZWa-Ov-j4D" id="lEh-PY-kAV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -216,10 +234,11 @@
         <scene sceneID="EH2-2z-ahw">
             <objects>
                 <tableViewController id="5ep-fs-RC0" customClass="AddGroupController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mzv-Xa-eb4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mzv-Xa-eb4" colorLabel="IBBuiltInLabel-Blue">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.55327696339999999" green="0.69112541989999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FWS-7S-KxU">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -248,7 +267,11 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9rU-YB-7rg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.3889100157" green="1" blue="0.30013798609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.3889100157" green="1" blue="0.30013798609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexColor" red="0.3889100157" green="1" blue="0.30013798609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.3889100157" green="1" blue="0.30013798609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.3889100157" green="1" blue="0.30013798609999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eTx-z6-GM7">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -274,7 +297,7 @@
         <scene sceneID="oNk-Wh-nva">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="alL-8Q-kbo" userLabel="Friends" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Oaz-Ni-Fq7" userLabel="Friends"/>
+                    <tabBarItem key="tabBarItem" title="Friends" id="Oaz-Ni-Fq7" userLabel="Friends"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tHX-nE-ajo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -425,11 +448,11 @@
             </objects>
             <point key="canvasLocation" x="2939.130434782609" y="-1524.1071428571429"/>
         </scene>
-        <!--Item-->
+        <!--News-->
         <scene sceneID="8Op-Bj-l5v">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UIX-0s-4Gf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BN9-Lj-mLI"/>
+                    <tabBarItem key="tabBarItem" title="News" id="BN9-Lj-mLI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DcL-Th-Zib">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
