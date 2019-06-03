@@ -15,6 +15,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameinput: UITextField!
     @IBOutlet weak var scrollView:UIScrollView!
     
+    //MARK: - Properties
+    private let networkingService = NetworkingService()
+    
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
