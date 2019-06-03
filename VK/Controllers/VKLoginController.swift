@@ -12,9 +12,7 @@ import WebKit
 class VKLoginController: UIViewController {
     
     @IBOutlet var webView: WKWebView!
-    
-
-    //@IBOutlet weak var webView: WKWebView!
+        
         {
         didSet {
             webView.navigationDelegate = self
@@ -60,5 +58,15 @@ extension VKLoginController: WKNavigationDelegate {
         }
         
         print (params)
+        
+        guard let token = params["access_token"],
+            let userIdString = params["user_id"],
+            let userId = Int(userIdString) else {
+                decisionHandler(.allow)
+                return
+        }
+        decisionHandler(.cancel)
+        
+        NetworkingService().loadGroups(token: token)
     }
 }
