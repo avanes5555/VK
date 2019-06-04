@@ -100,7 +100,6 @@
 		6F40248722534A3A00866E42 = {
 			isa = PBXGroup;
 			children = (
-				6F2945B7229C7D88009D16AC /* NetworkingService.swift */,
 				6F40249222534A3A00866E42 /* VK */,
 				6F40249122534A3A00866E42 /* Products */,
 				4F028EB53B44C276C19AFEA2 /* Pods */,
@@ -137,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				6F786DCD2284489700CC8B0B /* FotoController.swift */,
+				6F2945B7229C7D88009D16AC /* NetworkingService.swift */,
 				6FE165DB22A0241E00124DAF /* VKLoginController.swift */,
 				6F40249522534A3A00866E42 /* LoginViewController.swift */,
 			);
