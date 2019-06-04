@@ -11,7 +11,9 @@ import Alamofire
 
 class NetworkingService {
     
-    //private let baseUrl = "https://api.vk.com/method"
+    
+    
+    private let baseUrl = "https://api.vk.com/method"
     
     
     static let session: SessionManager = {
@@ -20,6 +22,8 @@ class NetworkingService {
         let session = SessionManager(configuration: config)
         return session
     }()
+    
+    
     
     public func loadGroups(token: String) {
         
