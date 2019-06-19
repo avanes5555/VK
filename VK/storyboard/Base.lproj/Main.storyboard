@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XQ0-i8-Nv2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -83,13 +83,29 @@
                                             <segue destination="PyL-uq-75D" kind="show" identifier="Show Main Screen" id="btr-so-617"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLE-xf-j9W">
+                                        <rect key="frame" x="103.5" y="542" width="207" height="40"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Rpi-vg-yo0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfr-nk-YzH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6sf-jE-ycf" firstAttribute="centerX" secondItem="UxX-ZG-4CP" secondAttribute="centerX" id="3e1-hf-bmi"/>
                                     <constraint firstItem="qQx-m3-DDT" firstAttribute="centerX" secondItem="UxX-ZG-4CP" secondAttribute="centerX" id="B6Y-lk-Ym6"/>
                                     <constraint firstItem="p5A-w9-UIT" firstAttribute="width" secondItem="8sZ-yH-Qhv" secondAttribute="width" id="Jxw-Ra-rIU"/>
+                                    <constraint firstItem="yLE-xf-j9W" firstAttribute="width" secondItem="qQx-m3-DDT" secondAttribute="width" id="LBA-SF-wif"/>
                                     <constraint firstItem="5Gz-Gv-MSw" firstAttribute="centerX" secondItem="UxX-ZG-4CP" secondAttribute="centerX" id="LMT-hD-km8"/>
                                     <constraint firstAttribute="bottom" secondItem="qQx-m3-DDT" secondAttribute="bottom" constant="20" id="M3H-ee-iLO"/>
+                                    <constraint firstItem="yLE-xf-j9W" firstAttribute="centerX" secondItem="qQx-m3-DDT" secondAttribute="centerX" id="QGT-Ea-OoX"/>
                                     <constraint firstItem="H2A-Ah-j1H" firstAttribute="width" secondItem="p5A-w9-UIT" secondAttribute="width" id="Qml-os-Lri"/>
                                     <constraint firstItem="6sf-jE-ycf" firstAttribute="top" secondItem="H2A-Ah-j1H" secondAttribute="bottom" constant="30" id="Rpz-2Y-Sfz"/>
                                     <constraint firstItem="5Gz-Gv-MSw" firstAttribute="top" secondItem="UxX-ZG-4CP" secondAttribute="top" constant="20" id="SvT-9m-7Kt"/>
@@ -104,6 +120,7 @@
                                     <constraint firstItem="qQx-m3-DDT" firstAttribute="width" secondItem="6sf-jE-ycf" secondAttribute="width" id="nO0-i9-V9c"/>
                                     <constraint firstItem="qQx-m3-DDT" firstAttribute="top" secondItem="6sf-jE-ycf" secondAttribute="bottom" constant="32" id="o4a-Ne-E2K"/>
                                     <constraint firstItem="8sZ-yH-Qhv" firstAttribute="top" secondItem="maT-yi-uAN" secondAttribute="bottom" constant="20" id="qwp-xW-oqv"/>
+                                    <constraint firstItem="yLE-xf-j9W" firstAttribute="top" secondItem="qQx-m3-DDT" secondAttribute="bottom" constant="20" id="qxu-W3-BS0"/>
                                     <constraint firstItem="5Gz-Gv-MSw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UxX-ZG-4CP" secondAttribute="leading" id="tCZ-gh-W4S"/>
                                     <constraint firstItem="H2A-Ah-j1H" firstAttribute="centerX" secondItem="UxX-ZG-4CP" secondAttribute="centerX" id="wDl-kt-upQ"/>
                                 </constraints>
@@ -218,6 +235,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="xjC-n2-33q">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="sPD-Da-gjJ">
+                            <connections>
+                                <action selector="logOutBtnPressed:" destination="XPR-2z-g4B" id="5Bd-R9-7N6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rtc-tz-d58">
                             <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -468,14 +490,14 @@
             <point key="canvasLocation" x="2939.130434782609" y="-1524.1071428571429"/>
         </scene>
         <!--Login Controller-->
-        <scene sceneID="xsB-rh-xCv">
+        <scene sceneID="rWT-wq-Cg6">
             <objects>
-                <viewController id="XQ0-i8-Nv2" customClass="VKLoginController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="W7g-dq-Ijz">
+                <viewController id="9p2-Mh-orz" customClass="VKLoginController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B0m-wI-Blz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo6-mh-iMQ">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Sv-7O-ZWm">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -486,20 +508,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uo6-mh-iMQ" firstAttribute="leading" secondItem="IVh-Py-Zcc" secondAttribute="leading" id="Kdc-Kf-d3M"/>
-                            <constraint firstItem="IVh-Py-Zcc" firstAttribute="trailing" secondItem="uo6-mh-iMQ" secondAttribute="trailing" id="VCu-Cr-zY0"/>
-                            <constraint firstItem="IVh-Py-Zcc" firstAttribute="bottom" secondItem="uo6-mh-iMQ" secondAttribute="bottom" id="hkE-Ad-7wR"/>
-                            <constraint firstItem="uo6-mh-iMQ" firstAttribute="top" secondItem="IVh-Py-Zcc" secondAttribute="top" id="yhE-S5-jB0"/>
+                            <constraint firstItem="ipC-V7-fBl" firstAttribute="bottom" secondItem="1Sv-7O-ZWm" secondAttribute="bottom" id="Ijs-6T-Rc7"/>
+                            <constraint firstItem="ipC-V7-fBl" firstAttribute="trailing" secondItem="1Sv-7O-ZWm" secondAttribute="trailing" id="QRk-5i-sVD"/>
+                            <constraint firstItem="1Sv-7O-ZWm" firstAttribute="top" secondItem="ipC-V7-fBl" secondAttribute="top" id="Uae-c2-KLS"/>
+                            <constraint firstItem="1Sv-7O-ZWm" firstAttribute="leading" secondItem="B0m-wI-Blz" secondAttribute="leading" id="mGs-QQ-aQk"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="IVh-Py-Zcc"/>
+                        <viewLayoutGuide key="safeArea" id="ipC-V7-fBl"/>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="uo6-mh-iMQ" id="qrg-yr-gGQ"/>
+                        <outlet property="webView" destination="1Sv-7O-ZWm" id="xPq-A8-E9d"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zpl-Bv-pPF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PoQ-Pb-PaK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2145" y="-1815"/>
+            <point key="canvasLocation" x="-2187" y="-1788"/>
         </scene>
         <!--News-->
         <scene sceneID="8Op-Bj-l5v">

@@ -11,6 +11,7 @@ import WebKit
 
 class VKLoginController: UIViewController {
     
+    
     @IBOutlet var webView: WKWebView!
         
         {

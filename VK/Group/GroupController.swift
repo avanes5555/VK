@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class GroupController: UITableViewController {
     
-    
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +35,20 @@ class GroupController: UITableViewController {
         return 10
     }
     
+    //MARK: - Action
     
-
+    
+    @IBAction func logOutBtnPressed(_ sender: Any) {
+        
+        do {
+              try Auth.auth().signOut()
+            dismiss(animated: true)
+        } catch {
+            show(error)
+        }
+      
+    }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard  let cell = tableView.dequeueReusableCell(withIdentifier: GroupCell.reuseId, for: indexPath) as? GroupCell else {fatalError("Cell connot be dequeued")}

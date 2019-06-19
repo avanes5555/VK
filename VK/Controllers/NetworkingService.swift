@@ -49,5 +49,32 @@ class NetworkingService {
         
         print("end")
     }
+    
+    func exampleOfCodeble()  {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "jsonplaceholder.typicode.com"
+        urlComponents.path = "/users"
+        
+        guard let url = urlComponents.url else { fatalError("URL is badly formatted.")}
+        
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            guard let data = data else { return }
+            let decoder = JSONDecoder()
+            
+            do {
+                let users = try decoder.decode([User].self, from: data)
+                print(users.count)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+            task.resume()
+    }
 }
 
