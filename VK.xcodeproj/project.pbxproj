@@ -11,6 +11,8 @@
 		6F0CE3DD227F75A00012F88B /* AddFriendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0CE3DC227F75A00012F88B /* AddFriendController.swift */; };
 		6F2945B5229A7BE9009D16AC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2945B4229A7BE9009D16AC /* Group.swift */; };
 		6F2945B8229C7D88009D16AC /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2945B7229C7D88009D16AC /* NetworkingService.swift */; };
+		6F3F6CE822B6CA680066482B /* VKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3F6CE722B6CA680066482B /* VKError.swift */; };
+		6F3F6CEA22B6D5B40066482B /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3F6CE922B6D5B40066482B /* UIViewController+Ext.swift */; };
 		6F40249422534A3A00866E42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F40249322534A3A00866E42 /* AppDelegate.swift */; };
 		6F40249622534A3A00866E42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F40249522534A3A00866E42 /* LoginViewController.swift */; };
 		6F40249922534A3A00866E42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F40249722534A3A00866E42 /* Main.storyboard */; };
@@ -21,6 +23,10 @@
 		6F94D5032263BC61001EE886 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F94D5022263BC61001EE886 /* TabBarController.swift */; };
 		6F94D5072263C051001EE886 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F94D5062263C051001EE886 /* FriendsController.swift */; };
 		6F94D5092263C85B001EE886 /* GroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F94D5082263C85B001EE886 /* GroupController.swift */; };
+		6FBA9C8722ABAF3500C47DD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBA9C8622ABAF3500C47DD4 /* User.swift */; };
+		6FBA9C8922ACC76F00C47DD4 /* VK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBA9C8822ACC76F00C47DD4 /* VK.swift */; };
+		6FBA9C8B22ACF3D200C47DD4 /* serviceVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FBA9C8A22ACF3D200C47DD4 /* serviceVK.swift */; };
+		6FBA9C8D22B4F1E600C47DD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FBA9C8C22B4F1E600C47DD4 /* GoogleService-Info.plist */; };
 		6FE165D822A018D800124DAF /* VKLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE165D722A018D800124DAF /* VKLogin.swift */; };
 		6FE165DC22A0241E00124DAF /* VKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE165DB22A0241E00124DAF /* VKLoginController.swift */; };
 		6FE165DF22A534D000124DAF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE165DE22A534D000124DAF /* WebKit.framework */; };
@@ -35,6 +41,8 @@
 		6F0CE3DC227F75A00012F88B /* AddFriendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendController.swift; sourceTree = "<group>"; };
 		6F2945B4229A7BE9009D16AC /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		6F2945B7229C7D88009D16AC /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		6F3F6CE722B6CA680066482B /* VKError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKError.swift; sourceTree = "<group>"; };
+		6F3F6CE922B6D5B40066482B /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		6F40249022534A3A00866E42 /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F40249322534A3A00866E42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F40249522534A3A00866E42 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		6F94D5022263BC61001EE886 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6F94D5062263C051001EE886 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		6F94D5082263C85B001EE886 /* GroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupController.swift; sourceTree = "<group>"; };
+		6FBA9C8622ABAF3500C47DD4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6FBA9C8822ACC76F00C47DD4 /* VK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK.swift; sourceTree = "<group>"; };
+		6FBA9C8A22ACF3D200C47DD4 /* serviceVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serviceVK.swift; sourceTree = "<group>"; };
+		6FBA9C8C22B4F1E600C47DD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6FE165D722A018D800124DAF /* VKLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLogin.swift; sourceTree = "<group>"; };
 		6FE165DB22A0241E00124DAF /* VKLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginController.swift; sourceTree = "<group>"; };
 		6FE165DE22A534D000124DAF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -92,6 +104,9 @@
 			children = (
 				6FE811A3228830D00000F3EE /* GroupCell.swift */,
 				6F94D5082263C85B001EE886 /* GroupController.swift */,
+				6FBA9C8622ABAF3500C47DD4 /* User.swift */,
+				6FBA9C8822ACC76F00C47DD4 /* VK.swift */,
+				6FBA9C8A22ACF3D200C47DD4 /* serviceVK.swift */,
 				6F0CE3DA227F4FEA0012F88B /* AddGroupController.swift */,
 			);
 			path = Group;
@@ -118,6 +133,7 @@
 		6F40249222534A3A00866E42 /* VK */ = {
 			isa = PBXGroup;
 			children = (
+				6FBA9C8C22B4F1E600C47DD4 /* GoogleService-Info.plist */,
 				6F40249322534A3A00866E42 /* AppDelegate.swift */,
 				6FE165DD22A0272100124DAF /* Controllers */,
 				6F0CE3D92279ED240012F88B /* storyboard */,
@@ -138,7 +154,9 @@
 				6F786DCD2284489700CC8B0B /* FotoController.swift */,
 				6F2945B7229C7D88009D16AC /* NetworkingService.swift */,
 				6FE165DB22A0241E00124DAF /* VKLoginController.swift */,
+				6F3F6CE722B6CA680066482B /* VKError.swift */,
 				6F40249522534A3A00866E42 /* LoginViewController.swift */,
+				6F3F6CE922B6D5B40066482B /* UIViewController+Ext.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F40249E22534A3B00866E42 /* LaunchScreen.storyboard in Resources */,
+				6FBA9C8D22B4F1E600C47DD4 /* GoogleService-Info.plist in Resources */,
 				6F40249B22534A3B00866E42 /* Assets.xcassets in Resources */,
 				6F40249922534A3A00866E42 /* Main.storyboard in Resources */,
 			);
@@ -267,20 +286,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F3F6CEA22B6D5B40066482B /* UIViewController+Ext.swift in Sources */,
 				6F2945B5229A7BE9009D16AC /* Group.swift in Sources */,
 				6F94D5032263BC61001EE886 /* TabBarController.swift in Sources */,
 				6F0CE3DD227F75A00012F88B /* AddFriendController.swift in Sources */,
 				6F2945B8229C7D88009D16AC /* NetworkingService.swift in Sources */,
+				6FBA9C8922ACC76F00C47DD4 /* VK.swift in Sources */,
 				6F94D5072263C051001EE886 /* FriendsController.swift in Sources */,
 				6F40249622534A3A00866E42 /* LoginViewController.swift in Sources */,
 				6F0CE3DB227F4FEA0012F88B /* AddGroupController.swift in Sources */,
 				6FE811A4228830D00000F3EE /* GroupCell.swift in Sources */,
+				6FBA9C8B22ACF3D200C47DD4 /* serviceVK.swift in Sources */,
 				6F40249422534A3A00866E42 /* AppDelegate.swift in Sources */,
 				6F786DD02284491200CC8B0B /* NewsController.swift in Sources */,
+				6FBA9C8722ABAF3500C47DD4 /* User.swift in Sources */,
 				6F786DCE2284489700CC8B0B /* FotoController.swift in Sources */,
 				6FE165D822A018D800124DAF /* VKLogin.swift in Sources */,
 				6FE165DC22A0241E00124DAF /* VKLoginController.swift in Sources */,
 				6F94D5092263C85B001EE886 /* GroupController.swift in Sources */,
+				6F3F6CE822B6CA680066482B /* VKError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
